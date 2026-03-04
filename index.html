@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TriXCodec Demo - VC vs Same Comparison</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TriXCodec Demo</h1>
+    <p class="subtitle">Compare <em>Voice Conversion</em> (_vc.wav) and <em>Reconstruction</em> (_same.wav) by model</p>
+  </header>
+
+  <div id="loading">Loading samples...</div>
+  <div id="no-data" class="hidden">
+    <p>No demo data found.</p>
+    <p>1) Prepare audio: <code>BIGCODEC_ROOT=/path/to/audio python demo/prepare_demo.py</code></p>
+    <p>2) Serve this page at <strong>http://localhost:50004</strong> (do not open index.html as file). Run: <code>bash demo/serve.sh</code></p>
+  </div>
+
+  <main id="app" class="hidden">
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="same">Reconstruction (Same)</button>
+      <button class="mode-tab" data-mode="vc">Voice Conversion (VC)</button>
+    </div>
+    <div class="sr-tabs">
+      <button class="sr-tab active" data-sr="24k">24 kHz</button>
+      <button class="sr-tab" data-sr="16k">16 kHz</button>
+    </div>
+
+    <div class="sample-list"></div>
+  </main>
+
+  <script src="app.js?v=2"></script>
+</body>
+</html>
