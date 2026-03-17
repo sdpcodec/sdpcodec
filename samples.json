@@ -13,92 +13,146 @@
       ],
       "samples": [
         {
-          "base_id": "7176-88083-000012-000005-7176-88083-000012-000005",
-          "gt": "audio/24k/same/DualCodec_(25Hz)/7176-88083-000012-000005-7176-88083-000012-000005_gt.wav",
+          "base_id": "6829-68769-000068-000001-6829-68769-000068-000001",
+          "gt": "audio/24k/same/DualCodec_(25Hz)/6829-68769-000068-000001-6829-68769-000068-000001_gt.wav",
           "models": {
             "DualCodec (25Hz)": {
-              "same": "audio/24k/same/DualCodec_(25Hz)/7176-88083-000012-000005-7176-88083-000012-000005_same.wav"
+              "same": "audio/24k/same/DualCodec_(25Hz)/6829-68769-000068-000001-6829-68769-000068-000001_same.wav"
             },
             "VARSTok": {
-              "same": "audio/24k/same/VARSTok/7176-88083-000012-000005-7176-88083-000012-000005_same.wav"
+              "same": "audio/24k/same/VARSTok/6829-68769-000068-000001-6829-68769-000068-000001_same.wav"
             },
             "LSCodec": {
-              "same": "audio/24k/same/LSCodec/7176-88083-000012-000005-7176-88083-000012-000005_same.wav"
+              "same": "audio/24k/same/LSCodec/6829-68769-000068-000001-6829-68769-000068-000001_same.wav"
             },
             "TriXCodec-24-S": {
-              "same": "audio/24k/same/TriXCodec-24-S/7176-88083-000012-000005-7176-88083-000012-000005_same.wav"
+              "same": "audio/24k/same/TriXCodec-24-S/6829-68769-000068-000001-6829-68769-000068-000001_same.wav"
             }
           }
         },
         {
-          "base_id": "1580-141084-000028-000002-1580-141084-000028-000002",
-          "gt": "audio/24k/same/DualCodec_(25Hz)/1580-141084-000028-000002-1580-141084-000028-000002_gt.wav",
+          "base_id": "2961-961-000018-000001-2961-961-000018-000001",
+          "gt": "audio/24k/same/DualCodec_(25Hz)/2961-961-000018-000001-2961-961-000018-000001_gt.wav",
           "models": {
             "DualCodec (25Hz)": {
-              "same": "audio/24k/same/DualCodec_(25Hz)/1580-141084-000028-000002-1580-141084-000028-000002_same.wav"
+              "same": "audio/24k/same/DualCodec_(25Hz)/2961-961-000018-000001-2961-961-000018-000001_same.wav"
             },
             "VARSTok": {
-              "same": "audio/24k/same/VARSTok/1580-141084-000028-000002-1580-141084-000028-000002_same.wav"
+              "same": "audio/24k/same/VARSTok/2961-961-000018-000001-2961-961-000018-000001_same.wav"
             },
             "LSCodec": {
-              "same": "audio/24k/same/LSCodec/1580-141084-000028-000002-1580-141084-000028-000002_same.wav"
+              "same": "audio/24k/same/LSCodec/2961-961-000018-000001-2961-961-000018-000001_same.wav"
             },
             "TriXCodec-24-S": {
-              "same": "audio/24k/same/TriXCodec-24-S/1580-141084-000028-000002-1580-141084-000028-000002_same.wav"
+              "same": "audio/24k/same/TriXCodec-24-S/2961-961-000018-000001-2961-961-000018-000001_same.wav"
             }
           }
         },
         {
-          "base_id": "1089-134691-000025-000001-1089-134691-000025-000001",
-          "gt": "audio/24k/same/DualCodec_(25Hz)/1089-134691-000025-000001-1089-134691-000025-000001_gt.wav",
+          "base_id": "4970-29093-000028-000000-4970-29093-000028-000000",
+          "gt": "audio/24k/same/DualCodec_(25Hz)/4970-29093-000028-000000-4970-29093-000028-000000_gt.wav",
           "models": {
             "DualCodec (25Hz)": {
-              "same": "audio/24k/same/DualCodec_(25Hz)/1089-134691-000025-000001-1089-134691-000025-000001_same.wav"
+              "same": "audio/24k/same/DualCodec_(25Hz)/4970-29093-000028-000000-4970-29093-000028-000000_same.wav"
             },
             "VARSTok": {
-              "same": "audio/24k/same/VARSTok/1089-134691-000025-000001-1089-134691-000025-000001_same.wav"
+              "same": "audio/24k/same/VARSTok/4970-29093-000028-000000-4970-29093-000028-000000_same.wav"
             },
             "LSCodec": {
-              "same": "audio/24k/same/LSCodec/1089-134691-000025-000001-1089-134691-000025-000001_same.wav"
+              "same": "audio/24k/same/LSCodec/4970-29093-000028-000000-4970-29093-000028-000000_same.wav"
             },
             "TriXCodec-24-S": {
-              "same": "audio/24k/same/TriXCodec-24-S/1089-134691-000025-000001-1089-134691-000025-000001_same.wav"
+              "same": "audio/24k/same/TriXCodec-24-S/4970-29093-000028-000000-4970-29093-000028-000000_same.wav"
             }
           }
         },
         {
-          "base_id": "8463-287645-000016-000000-8463-287645-000016-000000",
-          "gt": "audio/24k/same/DualCodec_(25Hz)/8463-287645-000016-000000-8463-287645-000016-000000_gt.wav",
+          "base_id": "8463-294828-000048-000001-8463-294828-000048-000001",
+          "gt": "audio/24k/same/DualCodec_(25Hz)/8463-294828-000048-000001-8463-294828-000048-000001_gt.wav",
           "models": {
             "DualCodec (25Hz)": {
-              "same": "audio/24k/same/DualCodec_(25Hz)/8463-287645-000016-000000-8463-287645-000016-000000_same.wav"
+              "same": "audio/24k/same/DualCodec_(25Hz)/8463-294828-000048-000001-8463-294828-000048-000001_same.wav"
             },
             "VARSTok": {
-              "same": "audio/24k/same/VARSTok/8463-287645-000016-000000-8463-287645-000016-000000_same.wav"
+              "same": "audio/24k/same/VARSTok/8463-294828-000048-000001-8463-294828-000048-000001_same.wav"
             },
             "LSCodec": {
-              "same": "audio/24k/same/LSCodec/8463-287645-000016-000000-8463-287645-000016-000000_same.wav"
+              "same": "audio/24k/same/LSCodec/8463-294828-000048-000001-8463-294828-000048-000001_same.wav"
             },
             "TriXCodec-24-S": {
-              "same": "audio/24k/same/TriXCodec-24-S/8463-287645-000016-000000-8463-287645-000016-000000_same.wav"
+              "same": "audio/24k/same/TriXCodec-24-S/8463-294828-000048-000001-8463-294828-000048-000001_same.wav"
             }
           }
         },
         {
-          "base_id": "2961-961-000019-000005-2961-961-000019-000005",
-          "gt": "audio/24k/same/DualCodec_(25Hz)/2961-961-000019-000005-2961-961-000019-000005_gt.wav",
+          "base_id": "2830-3979-000023-000000-2830-3979-000023-000000",
+          "gt": "audio/24k/same/DualCodec_(25Hz)/2830-3979-000023-000000-2830-3979-000023-000000_gt.wav",
           "models": {
             "DualCodec (25Hz)": {
-              "same": "audio/24k/same/DualCodec_(25Hz)/2961-961-000019-000005-2961-961-000019-000005_same.wav"
+              "same": "audio/24k/same/DualCodec_(25Hz)/2830-3979-000023-000000-2830-3979-000023-000000_same.wav"
             },
             "VARSTok": {
-              "same": "audio/24k/same/VARSTok/2961-961-000019-000005-2961-961-000019-000005_same.wav"
+              "same": "audio/24k/same/VARSTok/2830-3979-000023-000000-2830-3979-000023-000000_same.wav"
             },
             "LSCodec": {
-              "same": "audio/24k/same/LSCodec/2961-961-000019-000005-2961-961-000019-000005_same.wav"
+              "same": "audio/24k/same/LSCodec/2830-3979-000023-000000-2830-3979-000023-000000_same.wav"
             },
             "TriXCodec-24-S": {
-              "same": "audio/24k/same/TriXCodec-24-S/2961-961-000019-000005-2961-961-000019-000005_same.wav"
+              "same": "audio/24k/same/TriXCodec-24-S/2830-3979-000023-000000-2830-3979-000023-000000_same.wav"
+            }
+          }
+        },
+        {
+          "base_id": "260-123288-000045-000004-260-123288-000045-000004",
+          "gt": "audio/24k/same/DualCodec_(25Hz)/260-123288-000045-000004-260-123288-000045-000004_gt.wav",
+          "models": {
+            "DualCodec (25Hz)": {
+              "same": "audio/24k/same/DualCodec_(25Hz)/260-123288-000045-000004-260-123288-000045-000004_same.wav"
+            },
+            "VARSTok": {
+              "same": "audio/24k/same/VARSTok/260-123288-000045-000004-260-123288-000045-000004_same.wav"
+            },
+            "LSCodec": {
+              "same": "audio/24k/same/LSCodec/260-123288-000045-000004-260-123288-000045-000004_same.wav"
+            },
+            "TriXCodec-24-S": {
+              "same": "audio/24k/same/TriXCodec-24-S/260-123288-000045-000004-260-123288-000045-000004_same.wav"
+            }
+          }
+        },
+        {
+          "base_id": "260-123286-000021-000005-260-123286-000021-000005",
+          "gt": "audio/24k/same/DualCodec_(25Hz)/260-123286-000021-000005-260-123286-000021-000005_gt.wav",
+          "models": {
+            "DualCodec (25Hz)": {
+              "same": "audio/24k/same/DualCodec_(25Hz)/260-123286-000021-000005-260-123286-000021-000005_same.wav"
+            },
+            "VARSTok": {
+              "same": "audio/24k/same/VARSTok/260-123286-000021-000005-260-123286-000021-000005_same.wav"
+            },
+            "LSCodec": {
+              "same": "audio/24k/same/LSCodec/260-123286-000021-000005-260-123286-000021-000005_same.wav"
+            },
+            "TriXCodec-24-S": {
+              "same": "audio/24k/same/TriXCodec-24-S/260-123286-000021-000005-260-123286-000021-000005_same.wav"
+            }
+          }
+        },
+        {
+          "base_id": "1995-1837-000012-000003-1995-1837-000012-000003",
+          "gt": "audio/24k/same/DualCodec_(25Hz)/1995-1837-000012-000003-1995-1837-000012-000003_gt.wav",
+          "models": {
+            "DualCodec (25Hz)": {
+              "same": "audio/24k/same/DualCodec_(25Hz)/1995-1837-000012-000003-1995-1837-000012-000003_same.wav"
+            },
+            "VARSTok": {
+              "same": "audio/24k/same/VARSTok/1995-1837-000012-000003-1995-1837-000012-000003_same.wav"
+            },
+            "LSCodec": {
+              "same": "audio/24k/same/LSCodec/1995-1837-000012-000003-1995-1837-000012-000003_same.wav"
+            },
+            "TriXCodec-24-S": {
+              "same": "audio/24k/same/TriXCodec-24-S/1995-1837-000012-000003-1995-1837-000012-000003_same.wav"
             }
           }
         }
@@ -113,74 +167,92 @@
       ],
       "samples": [
         {
-          "base_id": "4446-2273-0029-4446-2273-0029",
-          "gt": "audio/16k/same/FlexiCodec/4446-2273-0029-4446-2273-0029_gt.wav",
+          "base_id": "7021-79740-0010-7021-79740-0010",
+          "gt": "audio/16k/same/FlexiCodec/7021-79740-0010-7021-79740-0010_gt.wav",
           "models": {
             "FlexiCodec": {
-              "same": "audio/16k/same/FlexiCodec/4446-2273-0029-4446-2273-0029_same.wav"
+              "same": "audio/16k/same/FlexiCodec/7021-79740-0010-7021-79740-0010_same.wav"
             },
             "BiCodec": {
-              "same": "audio/16k/same/BiCodec/4446-2273-0029-4446-2273-0029_same.wav"
+              "same": "audio/16k/same/BiCodec/7021-79740-0010-7021-79740-0010_same.wav"
             },
             "MSRCodec": {
-              "same": "audio/16k/same/MSRCodec/4446-2273-0029-4446-2273-0029_same.wav"
+              "same": "audio/16k/same/MSRCodec/7021-79740-0010-7021-79740-0010_same.wav"
             },
             "TriXCodec-16-L": {
-              "same": "audio/16k/same/TriXCodec-16-L/4446-2273-0029-4446-2273-0029_same.wav"
+              "same": "audio/16k/same/TriXCodec-16-L/7021-79740-0010-7021-79740-0010_same.wav"
             }
           }
         },
         {
-          "base_id": "3729-6852-0036-3729-6852-0036",
-          "gt": "audio/16k/same/FlexiCodec/3729-6852-0036-3729-6852-0036_gt.wav",
+          "base_id": "7021-79759-0005-7021-79759-0005",
+          "gt": "audio/16k/same/FlexiCodec/7021-79759-0005-7021-79759-0005_gt.wav",
           "models": {
             "FlexiCodec": {
-              "same": "audio/16k/same/FlexiCodec/3729-6852-0036-3729-6852-0036_same.wav"
+              "same": "audio/16k/same/FlexiCodec/7021-79759-0005-7021-79759-0005_same.wav"
             },
             "BiCodec": {
-              "same": "audio/16k/same/BiCodec/3729-6852-0036-3729-6852-0036_same.wav"
+              "same": "audio/16k/same/BiCodec/7021-79759-0005-7021-79759-0005_same.wav"
             },
             "MSRCodec": {
-              "same": "audio/16k/same/MSRCodec/3729-6852-0036-3729-6852-0036_same.wav"
+              "same": "audio/16k/same/MSRCodec/7021-79759-0005-7021-79759-0005_same.wav"
             },
             "TriXCodec-16-L": {
-              "same": "audio/16k/same/TriXCodec-16-L/3729-6852-0036-3729-6852-0036_same.wav"
+              "same": "audio/16k/same/TriXCodec-16-L/7021-79759-0005-7021-79759-0005_same.wav"
             }
           }
         },
         {
-          "base_id": "237-134500-0010-237-134500-0010",
-          "gt": "audio/16k/same/FlexiCodec/237-134500-0010-237-134500-0010_gt.wav",
+          "base_id": "3729-6852-0044-3729-6852-0044",
+          "gt": "audio/16k/same/FlexiCodec/3729-6852-0044-3729-6852-0044_gt.wav",
           "models": {
             "FlexiCodec": {
-              "same": "audio/16k/same/FlexiCodec/237-134500-0010-237-134500-0010_same.wav"
+              "same": "audio/16k/same/FlexiCodec/3729-6852-0044-3729-6852-0044_same.wav"
             },
             "BiCodec": {
-              "same": "audio/16k/same/BiCodec/237-134500-0010-237-134500-0010_same.wav"
+              "same": "audio/16k/same/BiCodec/3729-6852-0044-3729-6852-0044_same.wav"
             },
             "MSRCodec": {
-              "same": "audio/16k/same/MSRCodec/237-134500-0010-237-134500-0010_same.wav"
+              "same": "audio/16k/same/MSRCodec/3729-6852-0044-3729-6852-0044_same.wav"
             },
             "TriXCodec-16-L": {
-              "same": "audio/16k/same/TriXCodec-16-L/237-134500-0010-237-134500-0010_same.wav"
+              "same": "audio/16k/same/TriXCodec-16-L/3729-6852-0044-3729-6852-0044_same.wav"
             }
           }
         },
         {
-          "base_id": "1995-1837-0007-1995-1837-0007",
-          "gt": "audio/16k/same/FlexiCodec/1995-1837-0007-1995-1837-0007_gt.wav",
+          "base_id": "61-70970-0007-61-70970-0007",
+          "gt": "audio/16k/same/FlexiCodec/61-70970-0007-61-70970-0007_gt.wav",
           "models": {
             "FlexiCodec": {
-              "same": "audio/16k/same/FlexiCodec/1995-1837-0007-1995-1837-0007_same.wav"
+              "same": "audio/16k/same/FlexiCodec/61-70970-0007-61-70970-0007_same.wav"
             },
             "BiCodec": {
-              "same": "audio/16k/same/BiCodec/1995-1837-0007-1995-1837-0007_same.wav"
+              "same": "audio/16k/same/BiCodec/61-70970-0007-61-70970-0007_same.wav"
             },
             "MSRCodec": {
-              "same": "audio/16k/same/MSRCodec/1995-1837-0007-1995-1837-0007_same.wav"
+              "same": "audio/16k/same/MSRCodec/61-70970-0007-61-70970-0007_same.wav"
             },
             "TriXCodec-16-L": {
-              "same": "audio/16k/same/TriXCodec-16-L/1995-1837-0007-1995-1837-0007_same.wav"
+              "same": "audio/16k/same/TriXCodec-16-L/61-70970-0007-61-70970-0007_same.wav"
+            }
+          }
+        },
+        {
+          "base_id": "3575-170457-0042-3575-170457-0042",
+          "gt": "audio/16k/same/FlexiCodec/3575-170457-0042-3575-170457-0042_gt.wav",
+          "models": {
+            "FlexiCodec": {
+              "same": "audio/16k/same/FlexiCodec/3575-170457-0042-3575-170457-0042_same.wav"
+            },
+            "BiCodec": {
+              "same": "audio/16k/same/BiCodec/3575-170457-0042-3575-170457-0042_same.wav"
+            },
+            "MSRCodec": {
+              "same": "audio/16k/same/MSRCodec/3575-170457-0042-3575-170457-0042_same.wav"
+            },
+            "TriXCodec-16-L": {
+              "same": "audio/16k/same/TriXCodec-16-L/3575-170457-0042-3575-170457-0042_same.wav"
             }
           }
         },
@@ -201,6 +273,42 @@
               "same": "audio/16k/same/TriXCodec-16-L/1580-141084-0015-1580-141084-0015_same.wav"
             }
           }
+        },
+        {
+          "base_id": "7021-79740-0013-7021-79740-0013",
+          "gt": "audio/16k/same/FlexiCodec/7021-79740-0013-7021-79740-0013_gt.wav",
+          "models": {
+            "FlexiCodec": {
+              "same": "audio/16k/same/FlexiCodec/7021-79740-0013-7021-79740-0013_same.wav"
+            },
+            "BiCodec": {
+              "same": "audio/16k/same/BiCodec/7021-79740-0013-7021-79740-0013_same.wav"
+            },
+            "MSRCodec": {
+              "same": "audio/16k/same/MSRCodec/7021-79740-0013-7021-79740-0013_same.wav"
+            },
+            "TriXCodec-16-L": {
+              "same": "audio/16k/same/TriXCodec-16-L/7021-79740-0013-7021-79740-0013_same.wav"
+            }
+          }
+        },
+        {
+          "base_id": "121-127105-0013-121-127105-0013",
+          "gt": "audio/16k/same/FlexiCodec/121-127105-0013-121-127105-0013_gt.wav",
+          "models": {
+            "FlexiCodec": {
+              "same": "audio/16k/same/FlexiCodec/121-127105-0013-121-127105-0013_same.wav"
+            },
+            "BiCodec": {
+              "same": "audio/16k/same/BiCodec/121-127105-0013-121-127105-0013_same.wav"
+            },
+            "MSRCodec": {
+              "same": "audio/16k/same/MSRCodec/121-127105-0013-121-127105-0013_same.wav"
+            },
+            "TriXCodec-16-L": {
+              "same": "audio/16k/same/TriXCodec-16-L/121-127105-0013-121-127105-0013_same.wav"
+            }
+          }
         }
       ]
     }
@@ -214,44 +322,6 @@
         "TriXCodec-24-S"
       ],
       "samples": [
-        {
-          "base_id": "7127-75947-000006-000011-5683-32866-000013-000000",
-          "gt": "audio/24k/vc/vec2wav2.0/7127-75947-000006-000011-5683-32866-000013-000000_gt.wav",
-          "ref": "audio/24k/vc/vec2wav2.0/7127-75947-000006-000011-5683-32866-000013-000000_ref.wav",
-          "models": {
-            "vec2wav2.0": {
-              "vc": "audio/24k/vc/vec2wav2.0/7127-75947-000006-000011-5683-32866-000013-000000_vc.wav"
-            },
-            "Vevo": {
-              "vc": "audio/24k/vc/Vevo/7127-75947-000006-000011-5683-32866-000013-000000_vc.wav"
-            },
-            "LSCodec": {
-              "vc": "audio/24k/vc/LSCodec/7127-75947-000006-000011-5683-32866-000013-000000_vc.wav"
-            },
-            "TriXCodec-24-S": {
-              "vc": "audio/24k/vc/TriXCodec-24-S/7127-75947-000006-000011-5683-32866-000013-000000_vc.wav"
-            }
-          }
-        },
-        {
-          "base_id": "121-121726-000034-000001-4077-13754-000013-000000",
-          "gt": "audio/24k/vc/vec2wav2.0/121-121726-000034-000001-4077-13754-000013-000000_gt.wav",
-          "ref": "audio/24k/vc/vec2wav2.0/121-121726-000034-000001-4077-13754-000013-000000_ref.wav",
-          "models": {
-            "vec2wav2.0": {
-              "vc": "audio/24k/vc/vec2wav2.0/121-121726-000034-000001-4077-13754-000013-000000_vc.wav"
-            },
-            "Vevo": {
-              "vc": "audio/24k/vc/Vevo/121-121726-000034-000001-4077-13754-000013-000000_vc.wav"
-            },
-            "LSCodec": {
-              "vc": "audio/24k/vc/LSCodec/121-121726-000034-000001-4077-13754-000013-000000_vc.wav"
-            },
-            "TriXCodec-24-S": {
-              "vc": "audio/24k/vc/TriXCodec-24-S/121-121726-000034-000001-4077-13754-000013-000000_vc.wav"
-            }
-          }
-        },
         {
           "base_id": "1188-133604-000050-000003-5105-28233-000019-000001",
           "gt": "audio/24k/vc/vec2wav2.0/1188-133604-000050-000003-5105-28233-000019-000001_gt.wav",
@@ -308,6 +378,101 @@
               "vc": "audio/24k/vc/TriXCodec-24-S/3570-5695-000010-000004-4992-41806-000008-000000_vc.wav"
             }
           }
+        },
+        {
+          "base_id": "3729-6852-000003-000004-2961-961-000011-000004",
+          "gt": "audio/24k/vc/vec2wav2.0/3729-6852-000003-000004-2961-961-000011-000004_gt.wav",
+          "ref": "audio/24k/vc/vec2wav2.0/3729-6852-000003-000004-2961-961-000011-000004_ref.wav",
+          "models": {
+            "vec2wav2.0": {
+              "vc": "audio/24k/vc/vec2wav2.0/3729-6852-000003-000004-2961-961-000011-000004_vc.wav"
+            },
+            "Vevo": {
+              "vc": "audio/24k/vc/Vevo/3729-6852-000003-000004-2961-961-000011-000004_vc.wav"
+            },
+            "LSCodec": {
+              "vc": "audio/24k/vc/LSCodec/3729-6852-000003-000004-2961-961-000011-000004_vc.wav"
+            },
+            "TriXCodec-24-S": {
+              "vc": "audio/24k/vc/TriXCodec-24-S/3729-6852-000003-000004-2961-961-000011-000004_vc.wav"
+            }
+          }
+        },
+        {
+          "base_id": "8463-287645-000012-000003-8555-284449-000025-000002",
+          "gt": "audio/24k/vc/vec2wav2.0/8463-287645-000012-000003-8555-284449-000025-000002_gt.wav",
+          "ref": "audio/24k/vc/vec2wav2.0/8463-287645-000012-000003-8555-284449-000025-000002_ref.wav",
+          "models": {
+            "vec2wav2.0": {
+              "vc": "audio/24k/vc/vec2wav2.0/8463-287645-000012-000003-8555-284449-000025-000002_vc.wav"
+            },
+            "Vevo": {
+              "vc": "audio/24k/vc/Vevo/8463-287645-000012-000003-8555-284449-000025-000002_vc.wav"
+            },
+            "LSCodec": {
+              "vc": "audio/24k/vc/LSCodec/8463-287645-000012-000003-8555-284449-000025-000002_vc.wav"
+            },
+            "TriXCodec-24-S": {
+              "vc": "audio/24k/vc/TriXCodec-24-S/8463-287645-000012-000003-8555-284449-000025-000002_vc.wav"
+            }
+          }
+        },
+        {
+          "base_id": "1188-133604-000028-000003-7176-88083-000007-000001",
+          "gt": "audio/24k/vc/vec2wav2.0/1188-133604-000028-000003-7176-88083-000007-000001_gt.wav",
+          "ref": "audio/24k/vc/vec2wav2.0/1188-133604-000028-000003-7176-88083-000007-000001_ref.wav",
+          "models": {
+            "vec2wav2.0": {
+              "vc": "audio/24k/vc/vec2wav2.0/1188-133604-000028-000003-7176-88083-000007-000001_vc.wav"
+            },
+            "Vevo": {
+              "vc": "audio/24k/vc/Vevo/1188-133604-000028-000003-7176-88083-000007-000001_vc.wav"
+            },
+            "LSCodec": {
+              "vc": "audio/24k/vc/LSCodec/1188-133604-000028-000003-7176-88083-000007-000001_vc.wav"
+            },
+            "TriXCodec-24-S": {
+              "vc": "audio/24k/vc/TriXCodec-24-S/1188-133604-000028-000003-7176-88083-000007-000001_vc.wav"
+            }
+          }
+        },
+        {
+          "base_id": "3570-5694-000009-000001-8455-210777-000040-000000",
+          "gt": "audio/24k/vc/vec2wav2.0/3570-5694-000009-000001-8455-210777-000040-000000_gt.wav",
+          "ref": "audio/24k/vc/vec2wav2.0/3570-5694-000009-000001-8455-210777-000040-000000_ref.wav",
+          "models": {
+            "vec2wav2.0": {
+              "vc": "audio/24k/vc/vec2wav2.0/3570-5694-000009-000001-8455-210777-000040-000000_vc.wav"
+            },
+            "Vevo": {
+              "vc": "audio/24k/vc/Vevo/3570-5694-000009-000001-8455-210777-000040-000000_vc.wav"
+            },
+            "LSCodec": {
+              "vc": "audio/24k/vc/LSCodec/3570-5694-000009-000001-8455-210777-000040-000000_vc.wav"
+            },
+            "TriXCodec-24-S": {
+              "vc": "audio/24k/vc/TriXCodec-24-S/3570-5694-000009-000001-8455-210777-000040-000000_vc.wav"
+            }
+          }
+        },
+        {
+          "base_id": "908-157963-000010-000001-5639-40744-000024-000000",
+          "gt": "audio/24k/vc/vec2wav2.0/908-157963-000010-000001-5639-40744-000024-000000_gt.wav",
+          "ref": "audio/24k/vc/vec2wav2.0/908-157963-000010-000001-5639-40744-000024-000000_ref.wav",
+          "models": {
+            "vec2wav2.0": {
+              "vc": "audio/24k/vc/vec2wav2.0/908-157963-000010-000001-5639-40744-000024-000000_vc.wav"
+            },
+            "Vevo": {
+              "vc": "audio/24k/vc/Vevo/908-157963-000010-000001-5639-40744-000024-000000_vc.wav"
+            },
+            "LSCodec": {
+              "vc": "audio/24k/vc/LSCodec/908-157963-000010-000001-5639-40744-000024-000000_vc.wav"
+            },
+            "TriXCodec-24-S": {
+              "vc": "audio/24k/vc/TriXCodec-24-S/908-157963-000010-000001-5639-40744-000024-000000_vc.wav"
+            }
+          }
         }
       ]
     },
@@ -320,97 +485,154 @@
       ],
       "samples": [
         {
-          "base_id": "237-126133-0002-8463-287645-0005",
-          "gt": "audio/16k/vc/EZ-VC/237-126133-0002-8463-287645-0005_gt.wav",
-          "ref": "audio/16k/vc/EZ-VC/237-126133-0002-8463-287645-0005_ref.wav",
+          "base_id": "4446-2273-0004-2830-3979-0001",
+          "gt": "audio/16k/vc/EZ-VC/4446-2273-0004-2830-3979-0001_gt.wav",
+          "ref": "audio/16k/vc/EZ-VC/4446-2273-0004-2830-3979-0001_ref.wav",
           "models": {
             "EZ-VC": {
-              "vc": "audio/16k/vc/EZ-VC/237-126133-0002-8463-287645-0005_vc.wav"
+              "vc": "audio/16k/vc/EZ-VC/4446-2273-0004-2830-3979-0001_vc.wav"
             },
             "BiCodec": {
-              "vc": "audio/16k/vc/BiCodec/237-126133-0002-8463-287645-0005_vc.wav"
+              "vc": "audio/16k/vc/BiCodec/4446-2273-0004-2830-3979-0001_vc.wav"
             },
             "MSRCodec": {
-              "vc": "audio/16k/vc/MSRCodec/237-126133-0002-8463-287645-0005_vc.wav"
+              "vc": "audio/16k/vc/MSRCodec/4446-2273-0004-2830-3979-0001_vc.wav"
             },
             "TriXCodec-16-L": {
-              "vc": "audio/16k/vc/TriXCodec-16-L/237-126133-0002-8463-287645-0005_vc.wav"
+              "vc": "audio/16k/vc/TriXCodec-16-L/4446-2273-0004-2830-3979-0001_vc.wav"
             }
           }
         },
         {
-          "base_id": "4992-41806-0005-1995-1837-0001",
-          "gt": "audio/16k/vc/EZ-VC/4992-41806-0005-1995-1837-0001_gt.wav",
-          "ref": "audio/16k/vc/EZ-VC/4992-41806-0005-1995-1837-0001_ref.wav",
+          "base_id": "2300-131720-0017-908-31957-0020",
+          "gt": "audio/16k/vc/EZ-VC/2300-131720-0017-908-31957-0020_gt.wav",
+          "ref": "audio/16k/vc/EZ-VC/2300-131720-0017-908-31957-0020_ref.wav",
           "models": {
             "EZ-VC": {
-              "vc": "audio/16k/vc/EZ-VC/4992-41806-0005-1995-1837-0001_vc.wav"
+              "vc": "audio/16k/vc/EZ-VC/2300-131720-0017-908-31957-0020_vc.wav"
             },
             "BiCodec": {
-              "vc": "audio/16k/vc/BiCodec/4992-41806-0005-1995-1837-0001_vc.wav"
+              "vc": "audio/16k/vc/BiCodec/2300-131720-0017-908-31957-0020_vc.wav"
             },
             "MSRCodec": {
-              "vc": "audio/16k/vc/MSRCodec/4992-41806-0005-1995-1837-0001_vc.wav"
+              "vc": "audio/16k/vc/MSRCodec/2300-131720-0017-908-31957-0020_vc.wav"
             },
             "TriXCodec-16-L": {
-              "vc": "audio/16k/vc/TriXCodec-16-L/4992-41806-0005-1995-1837-0001_vc.wav"
+              "vc": "audio/16k/vc/TriXCodec-16-L/2300-131720-0017-908-31957-0020_vc.wav"
             }
           }
         },
         {
-          "base_id": "5683-32879-0013-4507-16021-0008",
-          "gt": "audio/16k/vc/EZ-VC/5683-32879-0013-4507-16021-0008_gt.wav",
-          "ref": "audio/16k/vc/EZ-VC/5683-32879-0013-4507-16021-0008_ref.wav",
+          "base_id": "4507-16021-0024-121-121726-0008",
+          "gt": "audio/16k/vc/EZ-VC/4507-16021-0024-121-121726-0008_gt.wav",
+          "ref": "audio/16k/vc/EZ-VC/4507-16021-0024-121-121726-0008_ref.wav",
           "models": {
             "EZ-VC": {
-              "vc": "audio/16k/vc/EZ-VC/5683-32879-0013-4507-16021-0008_vc.wav"
+              "vc": "audio/16k/vc/EZ-VC/4507-16021-0024-121-121726-0008_vc.wav"
             },
             "BiCodec": {
-              "vc": "audio/16k/vc/BiCodec/5683-32879-0013-4507-16021-0008_vc.wav"
+              "vc": "audio/16k/vc/BiCodec/4507-16021-0024-121-121726-0008_vc.wav"
             },
             "MSRCodec": {
-              "vc": "audio/16k/vc/MSRCodec/5683-32879-0013-4507-16021-0008_vc.wav"
+              "vc": "audio/16k/vc/MSRCodec/4507-16021-0024-121-121726-0008_vc.wav"
             },
             "TriXCodec-16-L": {
-              "vc": "audio/16k/vc/TriXCodec-16-L/5683-32879-0013-4507-16021-0008_vc.wav"
+              "vc": "audio/16k/vc/TriXCodec-16-L/4507-16021-0024-121-121726-0008_vc.wav"
             }
           }
         },
         {
-          "base_id": "1188-133604-0003-6829-68771-0011",
-          "gt": "audio/16k/vc/EZ-VC/1188-133604-0003-6829-68771-0011_gt.wav",
-          "ref": "audio/16k/vc/EZ-VC/1188-133604-0003-6829-68771-0011_ref.wav",
+          "base_id": "5683-32866-0010-4077-13754-0008",
+          "gt": "audio/16k/vc/EZ-VC/5683-32866-0010-4077-13754-0008_gt.wav",
+          "ref": "audio/16k/vc/EZ-VC/5683-32866-0010-4077-13754-0008_ref.wav",
           "models": {
             "EZ-VC": {
-              "vc": "audio/16k/vc/EZ-VC/1188-133604-0003-6829-68771-0011_vc.wav"
+              "vc": "audio/16k/vc/EZ-VC/5683-32866-0010-4077-13754-0008_vc.wav"
             },
             "BiCodec": {
-              "vc": "audio/16k/vc/BiCodec/1188-133604-0003-6829-68771-0011_vc.wav"
+              "vc": "audio/16k/vc/BiCodec/5683-32866-0010-4077-13754-0008_vc.wav"
             },
             "MSRCodec": {
-              "vc": "audio/16k/vc/MSRCodec/1188-133604-0003-6829-68771-0011_vc.wav"
+              "vc": "audio/16k/vc/MSRCodec/5683-32866-0010-4077-13754-0008_vc.wav"
             },
             "TriXCodec-16-L": {
-              "vc": "audio/16k/vc/TriXCodec-16-L/1188-133604-0003-6829-68771-0011_vc.wav"
+              "vc": "audio/16k/vc/TriXCodec-16-L/5683-32866-0010-4077-13754-0008_vc.wav"
             }
           }
         },
         {
-          "base_id": "5639-40744-0002-1580-141083-0027",
-          "gt": "audio/16k/vc/EZ-VC/5639-40744-0002-1580-141083-0027_gt.wav",
-          "ref": "audio/16k/vc/EZ-VC/5639-40744-0002-1580-141083-0027_ref.wav",
+          "base_id": "260-123288-0022-3729-6852-0044",
+          "gt": "audio/16k/vc/EZ-VC/260-123288-0022-3729-6852-0044_gt.wav",
+          "ref": "audio/16k/vc/EZ-VC/260-123288-0022-3729-6852-0044_ref.wav",
           "models": {
             "EZ-VC": {
-              "vc": "audio/16k/vc/EZ-VC/5639-40744-0002-1580-141083-0027_vc.wav"
+              "vc": "audio/16k/vc/EZ-VC/260-123288-0022-3729-6852-0044_vc.wav"
             },
             "BiCodec": {
-              "vc": "audio/16k/vc/BiCodec/5639-40744-0002-1580-141083-0027_vc.wav"
+              "vc": "audio/16k/vc/BiCodec/260-123288-0022-3729-6852-0044_vc.wav"
             },
             "MSRCodec": {
-              "vc": "audio/16k/vc/MSRCodec/5639-40744-0002-1580-141083-0027_vc.wav"
+              "vc": "audio/16k/vc/MSRCodec/260-123288-0022-3729-6852-0044_vc.wav"
             },
             "TriXCodec-16-L": {
-              "vc": "audio/16k/vc/TriXCodec-16-L/5639-40744-0002-1580-141083-0027_vc.wav"
+              "vc": "audio/16k/vc/TriXCodec-16-L/260-123288-0022-3729-6852-0044_vc.wav"
+            }
+          }
+        },
+        {
+          "base_id": "8224-274381-0001-8463-294828-0014",
+          "gt": "audio/16k/vc/EZ-VC/8224-274381-0001-8463-294828-0014_gt.wav",
+          "ref": "audio/16k/vc/EZ-VC/8224-274381-0001-8463-294828-0014_ref.wav",
+          "models": {
+            "EZ-VC": {
+              "vc": "audio/16k/vc/EZ-VC/8224-274381-0001-8463-294828-0014_vc.wav"
+            },
+            "BiCodec": {
+              "vc": "audio/16k/vc/BiCodec/8224-274381-0001-8463-294828-0014_vc.wav"
+            },
+            "MSRCodec": {
+              "vc": "audio/16k/vc/MSRCodec/8224-274381-0001-8463-294828-0014_vc.wav"
+            },
+            "TriXCodec-16-L": {
+              "vc": "audio/16k/vc/TriXCodec-16-L/8224-274381-0001-8463-294828-0014_vc.wav"
+            }
+          }
+        },
+        {
+          "base_id": "8455-210777-0070-260-123440-0015",
+          "gt": "audio/16k/vc/EZ-VC/8455-210777-0070-260-123440-0015_gt.wav",
+          "ref": "audio/16k/vc/EZ-VC/8455-210777-0070-260-123440-0015_ref.wav",
+          "models": {
+            "EZ-VC": {
+              "vc": "audio/16k/vc/EZ-VC/8455-210777-0070-260-123440-0015_vc.wav"
+            },
+            "BiCodec": {
+              "vc": "audio/16k/vc/BiCodec/8455-210777-0070-260-123440-0015_vc.wav"
+            },
+            "MSRCodec": {
+              "vc": "audio/16k/vc/MSRCodec/8455-210777-0070-260-123440-0015_vc.wav"
+            },
+            "TriXCodec-16-L": {
+              "vc": "audio/16k/vc/TriXCodec-16-L/8455-210777-0070-260-123440-0015_vc.wav"
+            }
+          }
+        },
+        {
+          "base_id": "1089-134686-0016-2094-142345-0032",
+          "gt": "audio/16k/vc/EZ-VC/1089-134686-0016-2094-142345-0032_gt.wav",
+          "ref": "audio/16k/vc/EZ-VC/1089-134686-0016-2094-142345-0032_ref.wav",
+          "models": {
+            "EZ-VC": {
+              "vc": "audio/16k/vc/EZ-VC/1089-134686-0016-2094-142345-0032_vc.wav"
+            },
+            "BiCodec": {
+              "vc": "audio/16k/vc/BiCodec/1089-134686-0016-2094-142345-0032_vc.wav"
+            },
+            "MSRCodec": {
+              "vc": "audio/16k/vc/MSRCodec/1089-134686-0016-2094-142345-0032_vc.wav"
+            },
+            "TriXCodec-16-L": {
+              "vc": "audio/16k/vc/TriXCodec-16-L/1089-134686-0016-2094-142345-0032_vc.wav"
             }
           }
         }
