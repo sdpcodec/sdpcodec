@@ -1,0 +1,14 @@
+datasets:
+  LibriSpeech:
+    root: data/LibriSpeech
+    trainsets: [train-clean-100, train-clean-360, train-other-500]
+    valsets: [dev-clean]
+    testsets: [test-clean]
+view:
+  train_filelist: ./filelists/librispeech_train.txt
+  val_filelist: ./filelists/librispeech_val.txt
+  test_filelist: ./filelists/librispeech_test.txt
+audio:
+  sr: 16000
+  normalization: false
+  max_wav_value: 32768.0

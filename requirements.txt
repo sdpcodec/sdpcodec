@@ -1,0 +1,36 @@
+numpy
+scipy
+soundfile
+librosa
+tqdm
+einops
+einx
+local-attention
+packaging
+termcolor
+requests
+urllib3
+matplotlib
+
+torch
+torchaudio
+torchmetrics
+pytorch-lightning
+
+hydra-core
+omegaconf
+datasets
+transformers
+s3prl
+speechbrain
+wandb
+jiwer
+nnAudio==0.3.4
+pesq
+pystoi
+
+# Optional for specific experimental configs:
+# s3tokenizer
+# torchcodec
+# flash-attn
+# mamba-ssm

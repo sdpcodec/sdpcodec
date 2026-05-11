@@ -1,0 +1,10 @@
+defaults: [mls]
+name: mls
+mls:
+  streaming: true
+  dataset_id: parler-tts/mls_eng
+  languages: [english]
+  train_split: train
+  seed: 1024
+  shuffle_buffer_size: 2000
+  streaming_num_workers: 0

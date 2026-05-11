@@ -1,0 +1,146 @@
+codec_encoder:
+  out_channels: 1024
+  ngf: 48
+  up_ratios: [2, 2, 2, 5, 5]
+  dilations: [1, 3, 9]
+  temporal:
+    use: true
+    type: lstm
+    bidirectional: false
+    mamba: {}
+codec_decoder:
+  in_channels: 1024
+  upsample_initial_channel: 1536
+  ngf: 48
+  up_ratios: [5, 5, 2, 2, 2]
+  dilations: [1, 3, 9]
+  quantizer_type: rvq
+  use_s3tokenizer_codebook: false
+  vq_num_quantizers: 1
+  vq_dim: 1024
+  vq_commit_weight: 0.25
+  vq_weight_init: false
+  vq_full_commit_loss: false
+  codebook_size: 8192
+  codebook_dim: 8
+  speaker_condition: false
+  condition_dim: 1024
+  snake_logscale: false
+  use_stage_speaker_film: true
+  spk_cond:
+    use: false
+    type: [mhca]
+    num_heads: 2
+    dropout: 0.2
+    start_layer: 0
+    end_layer: null
+    every: 1
+  vocos:
+    n_fft: null
+    hop_size: null
+    win_size: null
+    dim: 512
+    intermediate_dim: 1536
+    num_layers: 8
+    kernel_size: 7
+    padding: same
+    backbone: convnext
+  decoder_type: default
+  rndvoc_n_fft: null
+  rndvoc_hop_size: null
+  rndvoc_win_size: null
+  rndvoc_input_channel: 256
+  rndvoc_hidden_channel: 256
+  rndvoc_squeeze_size: 64
+  rndvoc_null_nstage: 6
+  rndvoc_nrep: 2
+  rndvoc_kernel_size: 7
+  rndvoc_causal: false
+  rndvoc_use_rnd: true
+  rndvoc_time_type: convnext_v2
+  rndvoc_freq_type: shuffler
+  temporal:
+    use: true
+    type: lstm
+    bidirectional: false
+    start_layer: 0
+    end_layer: null
+    every: 1
+    mamba: {}
+mpd:
+  periods: [2, 3, 5, 7, 11]
+  max_downsample_channels: 512
+  channels: 16
+  channel_increasing_factor: 4
+mstft:
+  stft_params:
+    fft_sizes: [128, 256, 512, 1024, 2048]
+    hop_sizes: [32, 64, 128, 256, 512]
+    win_lengths: [128, 256, 512, 1024, 2048]
+    window: hann_window
+  in_channels: 1
+  out_channels: 1
+  kernel_sizes: [5, 3]
+  channels: 32
+  max_downsample_channels: 512
+  downsample_scales: [2, 2, 2]
+  use_weight_norm: true
+spec_discriminator:
+  type: legacy
+  legacy_weight: 1.0
+  mrd_weight: 0.1
+  bigvgan_mrd:
+    resolutions:
+      - [1024, 120, 600]
+      - [2048, 240, 1200]
+      - [512, 50, 240]
+    channels: 32
+    lrelu_slope: 0.1
+  vocos_mrd:
+    fft_sizes: [2048, 1024, 512]
+    channels: 32
+    hop_factor: 0.25
+    bands:
+      - [0.0, 0.1]
+      - [0.1, 0.25]
+      - [0.25, 0.5]
+      - [0.5, 0.75]
+      - [0.75, 1.0]
+    lrelu_slope: 0.1
+  apnet2_mrd:
+    resolutions:
+      - [1024, 256, 1024]
+      - [2048, 512, 2048]
+      - [512, 128, 512]
+    channels: 64
+    lrelu_slope: 0.1
+cqt_discriminator:
+  use: false
+  in_channels: 1
+  out_channels: 1
+  kernel_sizes: [3, 9]
+  channels: 128
+  filters: 128
+  max_downsample_channels: 1024
+  max_filters: 1024
+  filters_scale: 1
+  downsample_scales: [1, 2, 4]
+  dilations: [1, 2, 4]
+  stride: [1, 2]
+  use_weight_norm: true
+  norm: weight_norm
+  activation: LeakyReLU
+  activation_params:
+    negative_slope: 0.1
+  cqt_params:
+    hop_lengths: [512, 256, 256]
+    fmins: [32.7, 32.7, 32.7]
+    n_octaves: [9, 9, 9]
+    bins_per_octaves: [24, 36, 48]
+    filter_scales: [1.0, 1.0, 1.0]
+    resample_factor: 2
+    earlydownsample: true
+    normalize_volume: false
+    window: hann
+    pad_mode: constant
+    verbose: true

@@ -1,0 +1,22 @@
+defaults:
+- preprocess: vqw2v_enc_24kHz_480hs_tribase
+- dataset: vqw2v_enc_24kHz_480hs_tribase
+- model: hubert_enc_apnformer_24kHz_trixbase
+- train: default
+log_dir: pl_log
+debug: false
+ckpt: null
+id: null
+input_dir: null
+output_dir: null
+hydra:
+  output_subdir: hydra
+  job:
+    chdir: true
+cache_dir: null
+voice_conversion: vc
+train:
+  adversarial:
+    preset: apnet2
+  apn_aux_loss:
+    use: true

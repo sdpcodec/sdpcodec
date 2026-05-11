@@ -1,0 +1,243 @@
+defaults:
+  - _self_
+
+mel_params:
+  sample_rate: 16000
+  n_fft: 1024
+  win_length: 640
+  hop_length: 320
+  mel_fmin: 10
+  mel_fmax: null
+  num_mels: 128
+f0_codec:
+  use_codec_structure: true
+  max_channels: 256
+  input_emb_width: 2
+  output_emb_width: 128
+  levels: 1
+  downs_t: [[1, 1, 1, 1]]
+  enc_strides_t: [[3, 4, 5, 8]]
+  dec_strides_t: [[8, 5, 4, 3]]
+  width: 64
+  depth: 4
+  m_conv: 1.0
+  channel_growth_rate: 4
+  dilation_growth_rate: 3
+  encoder_ngf: 16
+  encoder_use_rnn: true
+  encoder_rnn_bidirectional: false
+  encoder_rnn_num_layers: 2
+  encoder_up_ratios: [1, 1, 1, 3]
+  encoder_dilations: [1, 3, 9]
+  encoder_out_channels: 128
+  encoder_activation_type: LeakyReLU
+  encoder_leaky_relu_params:
+    negative_slope: 0.1
+  encoder:
+    use: ${..encoder_use_rnn}
+    type: lstm
+    bidirectional: ${..encoder_rnn_bidirectional}
+    num_layers: ${..encoder_rnn_num_layers}
+    mamba: {}
+    ngf: ${..encoder_ngf}
+    up_ratios: ${..encoder_up_ratios}
+    dilations: ${..encoder_dilations}
+    out_channels: ${..encoder_out_channels}
+    activation_type: ${..encoder_activation_type}
+    leaky_relu_params: ${..encoder_leaky_relu_params}
+  decoder_ngf: 16
+  decoder_use_rnn: true
+  decoder_rnn_bidirectional: false
+  decoder_rnn_num_layers: 2
+  decoder_rnn_type: lstm
+  decoder_up_ratios: [3, 1, 1, 1]
+  decoder_dilations: [1, 3, 9]
+  decoder_activation_type: LeakyReLU
+  decoder_leaky_relu_params:
+    negative_slope: 0.1
+  decoder_use_mhca: false
+  decoder_mhca_num_heads: 2
+  decoder_mhca_dropout: 0.2
+  decoder_mhca_key_dim: 128
+  decoder_mhca_use_sdpa: true
+  spk_cond:
+    type: [concat]
+    num_heads: ${..decoder_mhca_num_heads}
+    dropout: ${..decoder_mhca_dropout}
+    key_dim: ${..decoder_mhca_key_dim}
+    use_sdpa: ${..decoder_mhca_use_sdpa}
+  decoder:
+    use: ${..decoder_use_rnn}
+    type: ${..decoder_rnn_type}
+    bidirectional: ${..decoder_rnn_bidirectional}
+    num_layers: ${..decoder_rnn_num_layers}
+    mamba: {}
+    ngf: ${..decoder_ngf}
+    up_ratios: ${..decoder_up_ratios}
+    dilations: ${..decoder_dilations}
+    activation_type: ${..decoder_activation_type}
+    leaky_relu_params: ${..decoder_leaky_relu_params}
+    mhca:
+      use: ${...decoder_use_mhca}
+      num_heads: ${...decoder_mhca_num_heads}
+      dropout: ${...decoder_mhca_dropout}
+      key_dim: ${...decoder_mhca_key_dim}
+  zero_out_all_unvoiced: false
+  use_normalized_f0: false
+  finetune_f0_extractor: false
+  upsample_extracted_f0: false
+  use_fcpe_loss: false
+  fcpe_out_dims: 360
+  use_unnormf0_mse_loss: false
+speaker_encoder:
+  speaker_encoder_type: ecapa_tdnn
+  use_perceiver_encoder: true
+  perceiver_use_flash_attn: true
+  use_memory_cattn: false
+  use_quantizer: true
+  input_dim: 128
+  out_dim: 512 # x-vector (global embedding) dim
+  latent_dim: 128 # perceiver, memory cattn 의 output dim
+  token_num: 32 # legacy final token count when stack.use=false
+  discretize_memory_attn: false
+  memory_attn_codebook_size: 128
+  memory_attn_share_across_heads: true
+  stack:
+    use: false
+    layers: [pe]
+    token_nums: [32]
+    latent_dims: [128]
+    depths: [2]
+    tm_type: self_attn
+    num_heads: 8
+    dim_head: 64
+    ff_mult: 4
+    dropout: 0.0
+    use_flash_attn: true
+    # Example:
+    # use: true
+    # layers: [mca, pe, tm, pe]
+    # token_nums: [64, 64, null, 16]
+    # latent_dims: [256, 128, 128, 64]
+    # depths: [2, 2, 2, 2]
+  quantizer:
+    type: fsq
+    fsq:
+      levels: [4, 4, 4, 4, 4, 4]
+      num_quantizers: 1
+    simvq:
+      codebook_size: 4096
+      commitment: 0.25
+  norm_layer: bn
+  wavlm_checkpoint: pretrained_models/wavlm/WavLM-Large.pt
+codec_encoder:
+  use_vqw2v: false
+  freeze_vqw2v_encoder: true
+  use_w2v2: false
+  freeze_w2v2_encoder: true
+  use_hubert: true
+  freeze_hubert_encoder: true
+  use_w2vbert2: false
+  freeze_w2vbert2_encoder: true
+  hubert_model_name: facebook/hubert-large-ls960-ft
+  hubert_use_transformer: true
+  hubert_hidden_layers: [11, 14, 16]
+  hubert_hidden_mode: avg
+  hubert_ngf: 1024
+  up_ratios: null
+  dilations: [1, 3, 9]
+  ngf: 32
+  out_channels: 512
+  activation_type: SnakeBeta
+  leaky_relu_params:
+    negative_slope: 0.1
+  temporal:
+    use: true
+    type: lstm
+    bidirectional: false
+    mamba: {}
+codec_decoder:
+  in_channels: 512
+  upsample_initial_channel: 512
+  ngf: 32
+  up_ratios: [8, 5, 4, 3]
+  dilations: [1, 3, 9]
+  quantizer_type: simvq
+  freeze_kvq_emb: true
+  use_vqw2v_embed: false
+  vq_num_quantizers: 1
+  vq_dim: 512
+  vq_commit_weight: 0.25
+  vq_weight_init: false
+  vq_full_commit_loss: false
+  codebook_size: 300
+  codebook_dim: 8
+  speaker_condition: true
+  f0_condition:
+    use: true
+    type: [concat]
+    start_layer: 0
+    end_layer: null
+    every: 1
+  condition_dim: 512
+  snake_logscale: false
+  f0_speaker_condition: false
+  mhca_use_sdpa: true
+  spk_cond:
+    use: true
+    type: [mhca] # allowed: mhca, film
+    num_heads: 2
+    dropout: 0.2
+    use_sdpa: ${..mhca_use_sdpa}
+    start_layer: 0
+    end_layer: null
+    every: 1
+  activation_type: LeakyReLU
+  leaky_relu_params:
+    negative_slope: 0.1
+  decoder_type: vocos
+  vocos:
+    n_fft: 1920
+    hop_size: 480
+    win_size: 1920
+    dim: 512
+    intermediate_dim: 1536
+    num_layers: 8
+    kernel_size: 7
+    padding: same
+    backbone: convnext
+  temporal:
+    use: true
+    type: lstm
+    bidirectional: false
+    start_layer: 0
+    end_layer: null
+    every: 1
+    mamba:
+      d_state: 64
+      d_conv: 4
+      expand: 2
+      ff_mult: 2
+      dropout: 0.0
+      use_conv: true
+      conv_kernel_size: 5
+      conv_bias: true
+mpd:
+  periods: [2, 3, 5, 7, 11]
+  max_downsample_channels: 256
+  channels: 16
+  channel_increasing_factor: 4
+  use_weight_norm: false
+mstft:
+  stft_params:
+    fft_sizes: [78, 126, 206, 334, 542, 876, 1418, 2296]
+    hop_sizes: [39, 63, 103, 167, 271, 438, 709, 1148]
+    win_lengths: [78, 126, 206, 334, 542, 876, 1418, 2296]
+    window: hann_window
+  in_channels: 1
+  out_channels: 1
+  kernel_sizes: [5, 3]
+  channels: 16
+  max_downsample_channels: 256
+  downsample_scales: [2, 2, 2]
+  use_weight_norm: false

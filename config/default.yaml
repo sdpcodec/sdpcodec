@@ -1,0 +1,19 @@
+defaults:
+- preprocess: default
+- dataset: default
+- model: default
+- train: default
+seed: 1024
+deterministic: false
+log_dir: pl_log
+debug: false
+ckpt: null
+run_dir: null
+id: null
+input_dir: null
+output_dir: null
+hydra:
+  output_subdir: hydra
+  job:
+    chdir: true
+cache_dir: null

@@ -1,0 +1,294 @@
+preprocess:
+  datasets:
+    LibriSpeech:
+      root: data/LibriSpeech
+      trainsets: [train-clean-100, train-clean-360, train-other-500]
+      valsets: [dev-clean]
+      testsets: [test-clean]
+  view:
+    train_filelist: ./filelists/librispeech_train.txt
+    val_filelist: ./filelists/librispeech_val.txt
+    test_filelist: ./filelists/librispeech_test.txt
+  audio:
+    sr: 16000
+    normalization: false
+    max_wav_value: 32768.0
+dataset:
+  name: all
+  dataset:
+    _target_: data_module.FSDataset
+  train:
+    batch_size: 4
+    num_workers: 4
+    prefetch_factor: 4
+    shuffle: true
+  val:
+    batch_size: 8
+    num_workers: 4
+    prefetch_factor: 8
+    shuffle: false
+  test:
+    batch_size: 1
+    num_workers: 4
+    prefetch_factor: 8
+    shuffle: false
+  padding_idx: 0
+  frame_length: 200
+  latent_hop_length: 320
+  min_audio_length: 96000
+  ref_segment_duration: 6.0
+  min_ref_seconds: 3.0
+  timbre_perturb: false
+  timbre_rate_min: 0.85
+  timbre_rate_max: 1.2
+  timbre_rate_num: 100
+  quantize_sr: 10
+  mls:
+    dataset_id: parler-tts/mls_eng
+    languages: [english]
+    train_split: train
+    val_split: dev
+    test_split: test
+    streaming: false
+    seed: 1024
+    shuffle_buffer_size: 2000
+    streaming_num_workers: 0
+model:
+  mel_params:
+    sample_rate: 16000
+    n_fft: 1024
+    win_length: 640
+    hop_length: 320
+    mel_fmin: 10
+    mel_fmax: null
+    num_mels: 128
+  f0_codec:
+    use_codec_structure: true
+    input_emb_width: 2
+    output_emb_width: 128
+    levels: 1
+    downs_t: [[1, 1, 1, 1, 1]]
+    enc_strides_t: [[2, 2, 4, 5, 8]]
+    dec_strides_t: [[8, 5, 4, 2, 2]]
+    width: 64
+    depth: 4
+    m_conv: 1.0
+    channel_growth_rate: 4
+    dilation_growth_rate: 3
+    encoder_ngf: 32
+    encoder_use_rnn: true
+    encoder_rnn_bidirectional: false
+    encoder_rnn_num_layers: 2
+    encoder_up_ratios: [1, 1, 1, 2]
+    encoder_dilations: [1, 3, 9]
+    encoder_out_channels: 128
+    encoder_activation_type: LeakyReLU
+    encoder_leaky_relu_params:
+      negative_slope: 0.1
+    decoder_ngf: 32
+    decoder_use_rnn: true
+    decoder_rnn_bidirectional: false
+    decoder_rnn_num_layers: 2
+    decoder_rnn_type: lstm
+    decoder_up_ratios: [2, 1, 1, 1]
+    decoder_dilations: [1, 3, 9]
+    decoder_activation_type: LeakyReLU
+    decoder_leaky_relu_params:
+      negative_slope: 0.1
+    decoder_use_mhca: true
+    decoder_mhca_num_heads: 2
+    decoder_mhca_dropout: 0.2
+    decoder_mhca_key_dim: 128
+    codebook_size: 128
+    codebook_dim: 8
+    commitment: 0.25
+    codebook_loss_weight: 2.0
+    threshold_ema_dead_code: 0.2
+    zero_out_all_unvoiced: false
+    use_normalized_f0: true
+    finetune_f0_extractor: false
+    upsample_extracted_f0: false
+    use_fcpe_loss: true
+    fcpe_out_dims: 360
+    use_unnormf0_mse_loss: false
+  speaker_encoder:
+    speaker_encoder_type: wavlm
+    use_perceiver_encoder: true
+    use_quantizer: false
+    input_dim: 128
+    out_dim: 512
+    latent_dim: 128
+    token_num: 128
+    fsq_levels: [4, 4, 4, 4, 4, 4]
+    fsq_num_quantizers: 1
+    norm_layer: bn
+    vq_type: fsq
+    use_f0_mu_prediction_head: false
+    wavlm_checkpoint: pretrained_models/wavlm/WavLM-Large.pt
+    wavlm_output_layer: 6
+    freeze_wavlm: true
+  codec_encoder:
+    use_vqw2v: true
+    freeze_vqw2v_encoder: true
+    up_ratios: [2]
+    dilations: [1, 3, 9]
+    ngf: 32
+    out_channels: 512
+    activation_type: SnakeBeta
+    leaky_relu_params:
+      negative_slope: 0.1
+    temporal:
+      use: true
+      type: lstm
+      num_layers: 2
+      bidirectional: false
+      mamba: {}
+  codec_decoder:
+    in_channels: 512
+    upsample_initial_channel: 512
+    ngf: 32
+    up_ratios: [8, 5, 4, 2]
+    dilations: [1, 3, 9]
+    quantizer_type: rvq
+    use_pretrained_codebook: true
+    codebook_type: vq-wav2vec
+    freeze_kvq_emb: true
+    use_vqw2v_embed: false
+    vq_num_quantizers: 1
+    vq_dim: 512
+    vq_commit_weight: 0.25
+    vq_weight_init: false
+    vq_full_commit_loss: false
+    codebook_size: 1536
+    codebook_dim: 8
+    simvq_legacy: false
+    speaker_condition: true
+    f0_condition: true
+    condition_dim: 512
+    activation_type: SnakeBeta
+    leaky_relu_params:
+      negative_slope: 0.1
+    snake_logscale: true
+    simvq_alpha_transit_step: 0
+    simvq_linear_layer_type: linear
+    ema_decay: 0.0
+    initialize_as_identity: false
+    f0_speaker_condition: true
+    use_mean_pooling: false
+    use_mhca: true
+    mhca_num_heads: 2
+    mhca_dropout: 0.2
+    temporal:
+      use: true
+      type: lstm
+      num_layers: 2
+      bidirectional: false
+      mamba: {}
+  mpd:
+    periods: [2, 3, 5, 7, 11]
+    max_downsample_channels: 256
+    channels: 12
+    channel_increasing_factor: 4
+  mstft:
+    stft_params:
+      fft_sizes: [128, 256, 512, 1024, 2048]
+      hop_sizes: [32, 64, 128, 256, 512]
+      win_lengths: [128, 256, 512, 1024, 2048]
+      window: hann_window
+    in_channels: 1
+    out_channels: 1
+    kernel_sizes: [5, 3]
+    channels: 16
+    max_downsample_channels: 256
+    downsample_scales: [2, 2, 2]
+    use_weight_norm: true
+train:
+  trainer:
+    accelerator: gpu
+    devices: 1
+    min_steps: 1800000
+    max_steps: 1800000
+    precision: 32-true
+    limit_val_batches: null
+    limit_train_batches: null
+    log_every_n_steps: 50
+    num_sanity_val_steps: 9
+    accumulate_grad_batches: 1
+    val_check_interval: 5000
+    sync_batchnorm: false
+  lambdas:
+    lambda_disc: 1.0
+    lambda_feat_match_loss: 1.0
+    lambda_mel_loss: 15.0
+    lambda_adv: 1.0
+    lambda_stft_loss: 1.0
+    lambda_vq_loss: 1
+    lambda_xd_loss: 1.0
+    lambda_mi_loss: 100.0
+    lambda_f0_vq_loss: 1.0
+    lambda_f0_mu_loss: 1.0
+    lambda_f0_recon_loss: 10.0
+    lambda_vuv_recon_loss: 10.0
+    lambda_fcpe_loss: 10.0
+  use_mel_loss: true
+  use_feat_match_loss: true
+  num_pesq_processor: 4
+  transit_step: 1000
+  xd_loss_fade_step: null
+  gradient_accumulation_steps: 1
+  unfreeze_encoder_step: null
+  cmi_steps: 5
+  use_torch_compile: false
+  compile_mode: default
+  use_val_utmos: false
+  use_val_wavlm: false
+  use_val_wer: false
+  stft_loss_params:
+    fft_sizes: [128, 256, 512, 1024, 2048]
+    hop_sizes: [32, 64, 128, 256, 512]
+    win_lengths: [128, 256, 512, 1024, 2048]
+    window: hann_window
+  gen_optim_params:
+    lr: 1.0
+    betas: [0.8, 0.9]
+  disc_optim_params:
+    lr: 1.0
+    betas: [0.8, 0.9]
+  mi_optim_params:
+    lr: 1.0
+    betas: [0.8, 0.9]
+  gen_grad_clip: 1.0
+  disc_grad_clip: 1.0
+  mi_grad_clip: 1.0
+  gen_schedule_params:
+    warmup_step: 1000
+    down_step: 500000
+    min_lr: 1.0e-05
+    max_lr: 0.0001
+  disc_schedule_params:
+    warmup_step: 1000
+    down_step: 500000
+    min_lr: 1.0e-05
+    max_lr: 0.0001
+  mi_schedule_params:
+    warmup_step: 1000
+    down_step: 500000
+    min_lr: 1.0e-05
+    max_lr: 0.0001
+log_dir: pl_log
+debug: false
+ckpt: checkpoints/SDP-Codec-16-L.ckpt
+id: null
+input_dir: null
+output_dir: null
+cache_dir: null
+voice_conversion: same
+mode: same
+ref_dir: null
+ref_wav: null
+device: auto
+overwrite: false
+hydra:
+  output_subdir: null
+  job:
+    chdir: false

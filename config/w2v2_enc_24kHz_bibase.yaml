@@ -1,0 +1,17 @@
+defaults:
+- preprocess: vqw2v_enc_24kHz_bibase
+- dataset: vqw2v_enc_24kHz_bibase
+- model: w2v2_enc_24kHz_bibase
+- train: default
+log_dir: pl_log
+debug: false
+ckpt: null
+id: null
+input_dir: null
+output_dir: null
+hydra:
+  output_subdir: hydra
+  job:
+    chdir: true
+cache_dir: null
+voice_conversion: vc

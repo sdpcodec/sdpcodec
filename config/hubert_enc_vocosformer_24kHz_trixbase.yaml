@@ -1,0 +1,21 @@
+defaults:
+- preprocess: vqw2v_enc_24kHz_480hs_tribase
+- dataset: vqw2v_enc_24kHz_480hs_tribase
+- model: hubert_enc_vocosformer_24kHz_trixbase
+- train: default
+- _self_
+log_dir: pl_log
+debug: false
+ckpt: null
+id: null
+input_dir: null
+output_dir: null
+hydra:
+  output_subdir: hydra
+  job:
+    chdir: true
+cache_dir: null
+voice_conversion: vc
+train:
+  use_torch_compile: false
+  ddp_static_graph: true

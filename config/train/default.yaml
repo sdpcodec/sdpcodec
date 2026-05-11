@@ -1,0 +1,104 @@
+trainer:
+  accelerator: gpu
+  devices: 2
+  min_steps: 180000000
+  max_steps: 180000000
+  precision: 32-true
+  limit_val_batches: null
+  limit_train_batches: null
+  log_every_n_steps: 50
+  num_sanity_val_steps: 9
+  accumulate_grad_batches: 1
+  val_check_interval: 0.5
+  sync_batchnorm: true
+lambdas:
+  lambda_disc: 1.0
+  lambda_feat_match_loss: 1.0
+  lambda_mel_loss: 15.0
+  lambda_adv: 1.0
+  lambda_stft_loss: 1.0
+  lambda_vq_loss: 1000.0
+  lambda_xd_loss: 1.0
+  lambda_mi_loss: 100.0
+  lambda_f0_vq_loss: 1.0
+  lambda_f0_recon_loss: 10.0
+  lambda_vuv_recon_loss: 10.0
+  lambda_fcpe_loss: 10.0
+use_mel_loss: true
+use_feat_match_loss: true
+gan_loss:
+  mode: lsgan
+  use_bigvsan: false
+adversarial:
+  preset: null
+  extra_discriminators: []
+  cqt_segment_seconds: null
+  cqt_segment_samples: null
+  detach_f0_conds_for_audio: null
+  detach_f0_conds_for_audio_until_step: null
+apn_aux_loss:
+  use: null
+  amplitude_weight: 45.0
+  phase_weight: 100.0
+  consistency_weight: 20.0
+  real_imag_weight: 2.25
+  mel_weight: 45.0
+  warmup_steps: null
+  warmup_init_scale: 0.0
+  max_scale: 1.0
+  scale_mel_with_aux: true
+num_pesq_processor: 8
+transit_step: 1000
+xd_loss_fade_step: null
+gradient_accumulation_steps: 1
+unfreeze_encoder_step: null
+cmi_steps: 5
+use_torch_compile: false
+wandb_offline: false
+compile_mode: default
+use_val_utmos: true
+use_val_wavlm: true
+use_val_wer: true
+ddp_find_unused_parameters: true
+ddp_static_graph: true
+ddp_gradient_as_bucket_view: false
+optimizer_zero_grad_set_to_none: false
+allow_tf32: false
+float32_matmul_precision: highest
+profile_timing_enabled: false
+profile_timing_sync_cuda: true
+profile_timing_warmup_steps: 5
+profile_timing_log_every: 20
+remove_weight_norm_from_modules: []
+stft_loss_params:
+  fft_sizes: [128, 256, 512, 1024, 2048]
+  hop_sizes: [32, 64, 128, 256, 512]
+  win_lengths: [128, 256, 512, 1024, 2048]
+  window: hann_window
+gen_optim_params:
+  lr: 1.0
+  betas: [0.8, 0.9]
+disc_optim_params:
+  lr: 1.0
+  betas: [0.8, 0.9]
+mi_optim_params:
+  lr: 1.0
+  betas: [0.8, 0.9]
+gen_grad_clip: 1.0
+disc_grad_clip: 1.0
+mi_grad_clip: 1.0
+gen_schedule_params:
+  warmup_step: 1000
+  down_step: 500000
+  min_lr: 1.0e-05
+  max_lr: 0.0001
+disc_schedule_params:
+  warmup_step: 1000
+  down_step: 500000
+  min_lr: 1.0e-05
+  max_lr: 0.0001
+mi_schedule_params:
+  warmup_step: 1000
+  down_step: 500000
+  min_lr: 1.0e-05
+  max_lr: 0.0001

@@ -1,0 +1,39 @@
+name: all
+dataset:
+  _target_: data_module.FSDataset
+train:
+  batch_size: 16
+  num_workers: 2
+  prefetch_factor: 16
+  shuffle: true
+val:
+  batch_size: 16
+  num_workers: 2
+  prefetch_factor: 8
+  shuffle: false
+test:
+  batch_size: 1
+  num_workers: 4
+  prefetch_factor: 8
+  shuffle: false
+padding_idx: 0
+frame_length: 200
+latent_hop_length: 160
+min_audio_length: 16000
+ref_segment_duration: 6.0
+min_ref_seconds: 3.0
+timbre_perturb: false
+timbre_rate_min: 0.85
+timbre_rate_max: 1.2
+timbre_rate_num: 100
+quantize_sr: 10
+mls:
+  dataset_id: parler-tts/mls_eng
+  languages: [english]
+  train_split: train
+  val_split: dev
+  test_split: test
+  streaming: false
+  seed: 1024
+  shuffle_buffer_size: 2000
+  streaming_num_workers: 0

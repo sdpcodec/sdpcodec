@@ -1,0 +1,31 @@
+name: librispeech
+dataset:
+  _target_: data_module.FSDataset
+train:
+  filelist: ./filelists/librispeech_train.txt
+  batch_size: 16
+  num_workers: 2
+  prefetch_factor: 16
+  shuffle: true
+val:
+  filelist: ./filelists/librispeech_val.txt
+  batch_size: 16
+  num_workers: 2
+  prefetch_factor: 8
+  shuffle: false
+test:
+  filelist: ./filelists/librispeech_test.txt
+  batch_size: 1
+  num_workers: 4
+  prefetch_factor: 8
+  shuffle: false
+padding_idx: 0
+latent_hop_length: 480
+min_audio_length: 24000
+ref_segment_duration: 6.0
+timbre_perturb: false
+timbre_rate_min: 0.85
+timbre_rate_max: 1.2
+timbre_rate_num: 100
+quantize_sr: 10
+min_ref_seconds: 3.0
