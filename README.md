@@ -87,14 +87,7 @@ Release configs are exact inference-compatible snapshots of the models above; fo
 
 ## Citation
 
-```bibtex
-@inproceedings{kim2026sdpcodec,
-  title={SDP-Codec: A Speaker-Decoupled Speech Codec with Pitch Injection for Low-Bitrate Coding and Zero-Shot Voice Conversion},
-  author={Kim, Hounsu and Nam, Juhan},
-  booktitle={Proc. Interspeech},
-  year={2026}
-}
-```
+Citation information will be added after the paper is public.
 
 ## Acknowledgements
 
